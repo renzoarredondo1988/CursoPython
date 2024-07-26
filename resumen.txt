@@ -1,0 +1,727 @@
+
+Video 5
+funciones
+def nombre_funcion():
+
+Video 10
+
+Condicionales
+Instruccion if
+El flujo de programacion siempre se lee de arriba hacia abajo.
+Cuando llega al condiciional if el flujo se detiene cuando llega a el y evalua si se cumple. Es una condicion a evaluar dentro de este programa.
+Cuando lee el if, evalua si esa condicion es verdadera o falsa.
+Si es verdadera, el flujo entra dentro del bloque if y acciona las instrucciones que hay dentro de ella. y cuando termina continua con la ejecucion hacia abajo.
+Sii es falsa,  salta todo el bloque if e ignora todas las instrucciones dentro. Es decir que no las ejecuta.
+
+Sintaxis
+
+Ej
+
+def evaluacion(nota):
+    valoracion="aprobado"
+    if nota<5:
+        valoracion="suspenso"
+    return valoracion
+
+
+>
+<
+==
+>=
+<=
+!= diferente que
+funcion input() es una funcion predefinida que deja el programa en stand by hasta que no se le ingresa una entrada
+Cada cosa que pongamos dentro del input sera considerado un string incluso los numeros
+con la funcion int() se transforma cualquier string siempre que sea posible a numero
+
+La funcion input() permite introducir parametros
+
+Por ej.
+input("Introduce la nota del alumno: ")
+
+termino ambito.
+
+Video 11
+
+condicional else
+
+donde se vea un else traducir como "y si no es verdad"
+el if significa "si"
+
+cada else tiene q tener su if. En cambio, pueden haber if sin else.
+
+
+edad_usuario=int(input("Introduce tu edad, por favor"))
+
+if edad_usuario<18:
+    print("No puedes pasar")
+else:
+    print("Puedes pasar")
+
+El else siempre va a trabajar con el if que tiene mas cercano. Es decir, si hay dos if,el else va con el ultimo
+
+if xxxxxxxxx
+if xxxxxxxxx
+else xxxxxxx trabaja con el segundo if
+
+Cuando hay q poner muchas condiciones, se usa la condicion elif
+con elif el programa hace que el else entre en juego cuando no se ha cumplido ninguna condicion de los if de arriba. No forma un bloque con el ultimo if.
+
+edad_usuario=int(input("Introduce tu edad, por favor: "))
+
+if edad_usuario<18:
+    print("No puedes pasar")
+elif edad_usuario>100:
+    print("Edad incorrecta")
+else:
+    print("Puedes pasar")
+    
+print("El programa ha finalizado")
+
+Video 12
+
+Condicionales-> En Phyton no existe el condicional Switch... se utiliza en otros lenguajes cuando hay que evaluar muchas condiciones encadenadas.
+Phyton si permite concatenar operadores de comparacion que no todos los lenguajes lo permiten
+Si tiene los operadores logicos "and" "or" y el operador "in"
+
+stackoverflow es para el gallego el mejor foro de programacion
+
+if 0<edad<100:
+    print("Edad es correcta")
+else:
+    print("Edad incorrecta")
+
+en ese caso, el programa lee la operacion de izquierda a derecha. Si la primera condicion es correcta, 0<100, continua leyendo hacia la derecha.
+Verifica si edad<100.
+
+Para concatenar un int con un strg no se puede utilizar el operador "+" (da error). Esto pasa porque Phyton es fuertemente tipado, o sea, hace una distincion fuerte entre los distintos tipos de datos.
+una forma seria usar el +str(variable int)
+
+Video 13
+
+Condicionales IV
+Operadores and y or e in
+El "and" lo podemos traducir como "y si ademas".
+El "or" lo podemos traducir como un "o si no"
+
+Es decir, en la primera se tienen que cumplir todas las condiciones. En la segunda se tiene que cumplir la del or
+En la funcion in, si lo que se compara es con un string, va entre comillas. Si es un int, solo se separa con comas sin comillas.
+
+Recordar que Phyton es case sensitive (identifica entre mayusculas y minusculas)
+
+Para corregir esto se puede usar el lower() o upper()
+
+Video 14
+
+Bucles: Permite repetir una o varias lineas de codigos, varias veces. De esta forma evitamos copiar x cantidad de veces una o varias lineas de codigo.
+Ademas, hay veces que no sabemos cuantas veces se tiene q repetir esa linea de codigo.
+
+Tipos de bucles.
+Determinados. Se ejecutan un numero determinado de veces. Se sabr a priori cuantas veces se va a ejecutar el codigo interior del bucle.
+Indeterminados. Se ejecutan un numero indeterminado de veces. No se sabe a priori cuantas veces se ejecutara el codigo en su interior. El numero de veces que se ejecutara dependera de las circunstancias durante la ejecucion del programa.
+
+El bucle cuenta de dos partes:
+Declaracion bucle:
+	Cuerpo del bucle
+
+EL programa va leyendo las instrucciones, y cuando llega a la declaracion del bucle, lee las lineas dentro del cuerpo del bucle hasta que el mismo se resuelve.
+
+Bucle determiinados
+
+Bucle for Sintaxis:
+
+for variable in elemento a recorrer:
+	Cuerpo del bucle
+
+El elemento a recorrer puede ser una lista, una tupla, un rango, etc.
+El cuerpo del bucle (codigo dentro del bucle) tiene que tener una identacion. Puede ser una linea de codigo o varias. La identacion determina que es lo que esta dnetro del bucle.
+La variable puede llamarse como quieras, pero por convencion las variables que ocupan dentro de un bucle for se la llama i
+
+Ej. for i in [1,2,3]:
+    print("Hola")
+
+Aca vemos que la variable i es una lista. La primera linea es el elemento del bucle y la segunda es el cuerpo.
+En este caso se va a repetir 3 veces. Es basicamente porque el elemento a recorrer esta formada por 3 elementos. No porque vaya hasta el 3...
+
+for i in ["primavera","verano","otoño","invierno"]:
+    print("Hola")
+
+En este caso ejecuta el print 4 veces.
+
+Phyton lo que lee es que, por ej. 
+
+i=primavera entonces ejecuta el "Hola"    la segunda vez 
+i="verano" y asi...
+Cuando llega un momento al que la variable i no le puede asignar mas valores, se acaba el bucle.
+
+for i in ["primavera","verano","otoño","invierno"]:
+    print(i)
+
+Ahi vemos que imprime los valores que le asigna a i...
+
+Video 15
+- Bucle for
+	.	Recorriendo strings
+	.	Tipo range
+	.	Notaciones especiales con print
+
+for i in["Pildoras","Informaticas",3]:
+    print ("Hola", end="")
+
+con el end,"" lo que se logra es que la impresion quede una al lado del otro. Si pones espacios entre las comillas podes ir separando.
+
+Los string Phyton los lee caracter a caracter. Ej.
+
+for i in "juan@pildorasinformaticas.es":
+    print ("Hola", end="")
+
+El resultado son tantos "Hola" como caracteres tiene el Strg
+
+Ejemplo de uso. Verificar si el correo es correcto
+
+email=False
+
+
+for i in "juan@pildorasinformaticas.es":
+    if(i=="@"):
+        email=True
+        
+if email==True:
+    print("Email es correcto")
+else:
+    print("Email no es correcto")
+
+Cuando es una variable booleana, no resulta necesario poner if email==True:
+si ponemos if email: ya se sobre entiende.
+
+TEMA IGUALES -> IMPORTANTE
+Dos iguales comparan, un igual asigna.
+
+Ejercicio de email con contador con errores.
+
+El tipo range es similar a un array
+Ej
+for i in range(5):
+    print("Hola")
+
+En Phyton 2 el range es considerado una funcion, en Phyton 3 un tipo-
+En este caso, el range considera 5 elementos, del 0 al 4. Imprime el Hola 5 veces.
+
+Video 16
+
+.	Tipo range
+.	Notaciones especiales con print
+
+for i in range(5):
+    print(f"valor de la variable {i}")
+
+Con la f, lo que hacemos es generar una notacion especial que nos permite unir lo que tiene que imprimir con un strg, poniendo la variable entre llaves
+
+for i in range(5,10):
+    print(f"valor de la variable {i}")
+
+Con el range en esa forma, le indicamos de que variable arrancar y en cual terminar.
+En este caso imprime 5,6,7,8,9
+
+Y si agregamos una mas, lo que le indicamos al range es de cuanto en cuanto tiene que hacer el conteo
+
+for i in range(5,50,3):
+    print(f"valor de la variable {i}")
+la funcion leng() devuelve la longitud de uns string
+
+ej. len("juan") devuelve un 4.
+
+Video 17
+
+Bucle while (indeterminado)
+Sintaxis
+While condicion:
+	cuerpo del bucle
+
+Es indeterminado xq no sabemos cuantas veces se va a ejecutar, incluso se puede armar un bucle infinito.
+
+Cada vez que leamos el codigo while, traducir como "mientras"
+
+Recordatorio. Para concatenar un str con un int, hay que pasar la variable int a str poniendo el mando str antes y en parentesis la variable int
+
+Ej.
+i=1
+
+while i<=10:
+    print("Ejecucion "+str(i))
+    
+print("Termino la ejecucion")
+
+Vemos que en este programa se genera un bucle infinito, porque i siempre se mantiene en 1, y por ende se cumple infinitamente la condicion i<=10
+
+Si agregamos un contador, esta situacion cambia
+
+
+i=1
+
+while i<=10:
+    print("Ejecucion "+str(i))
+    i=i+1
+print("Termino la ejecucion")
+
+En este caso, el programa lee de arriba a abajo. Cada vez que entra en el bucle, i agrega una unidad, hasta que va a llegar un momento en que no se va a 
+cumplir la condicion del bucle y va a continuar con los codigos de mas abajo.
+
+En este caso no vemos su condicion indeterminada, porque aca podemos predecir que el programa se va a ejecutar diez veces
+
+ponemos negativa vuelve a preguntar
+
+edad=int(input("Introduce la edad, por favor: "))
+
+while edad<0:
+    print("Has introducido una edad negativa. Vuelve a intentarlo ")
+    edad=int(input("Introduce la edad, por favor: "))
+    
+print("Gracias por colaborar. Puedes pasar")
+print("Edad del aspirante "+str(edad))
+
+En este caso el while es indeterminado. Si no ponemos nunca edad positivas el bucle nunca se resolvera. Si ponemos una edad positiva el programa sale del bucle (o nunca ingresa si lo hacemos bien a la primera)
+
+
+edad=int(input("Introduce la edad, por favor: "))
+
+while edad<5 or edad>100:
+    print("Has introducido una edad negativa. Vuelve a intentarlo ")
+    edad=int(input("Introduce la edad, por favor: "))
+    
+print("Gracias por colaborar. Puedes pasar")
+print("Edad del aspirante "+str(edad))
+
+En este caso, limitamos la edad a entre 5 y 100 años.
+A la hora de crear programas, hay veces que se necesita un bucle infinito y otras veces que no.
+
+La palabra reservada break lo que hace es salir del bucle. Si el flujo de ejecucion del programa llega a leer el break, sale del bucle.
+
+import math
+
+#Crearemos un programa que halle la raiz cuadrada de un numero
+
+print ("Programa de calculo de raiz cuadrada")
+numero=int(input("Introduce un numero por favor: "))
+
+intentos=0
+
+while numero<0:
+    print("No se puede hallar la raiz de un numero negativo")
+    
+    if intentos==2:
+        print("Has consumido demasiados intentos. El programa ha finalizado ")
+        break;
+        
+    numero=int(input("Introduce un numero por favor: "))
+    if numero<0:
+        intentos=intentos+1
+    
+if intentos<2:
+    solucion=math.sqrt(numero)
+    print ("La raiz cuadrada de "+str(numero)+" es "+str(solucion))
+
+En este programa, puede ser que el bucle no se ejecute ni una vez, porq el usuario pone el num positivo de una vez. 
+Puede que se ejecute una vez, 2 veces y ya la tercera vez no por el break y el contador intentos.
+
+El programa se lee asi.
+si ponemos un numero negativo, el programa entra en el primer while. Ignora el if de intentos, porque intentos no es igual a 2.
+Pero nos pide en la siguiente linea dentro del bucle otro numero, aumentando el numero de intentos de 0 a 1. Al hacerlo nuevamente 
+con otro numero negativo, intentos es igual a 2. Entonces ahi si se mete en el primer if, que saca el flujo de ejecucion fuera del bucle while.
+Entonces se mete en el segundo if, que tampoco se cumple, y ahi muere el programa.
+
+Cuando ponemos un numero positivo, si entra en el ultimo if y da la solucion.
+
+Video 18
+
+- Instrucciones contine, pass y else
+
+La instruccion Continue lo que hace es pasar a la siguiente interaccion del bucle. 
+La instruccion pass devuelve un null. Se utiliza en casos muy concretos.
+La instruccion else funciona muy similar a como lo hace dentro de un condicional if.
+
+Ej Instruccion Continue
+for letra in "Python":
+    
+    if letra=="h":
+        continue
+    
+    print("Viendo la letra: "+letra)
+
+En este caso, el for va leyendo la palabra Phyton. Cuando se encuentre con la "h", lo que hace es ignorar dicha instruccion y continuar con el bucle.
+La instruccion +=1 lo que hace es ir sumando de a uno la variable.
+
+Ejemplo de instruccion del else
+
+
+#Programa que evalua si hay un arroba o no en un correo
+email=input("Introduce tu email, por favor: ")
+
+for i in email:
+    if i=="@":
+        arroba=True
+        
+        break;
+        
+else:
+    arroba=False
+    
+print(arroba)
+
+Utilizar el else en un for o en un while es confuso para los programadores. El else va fuera de la identacion del for, en este caso.
+
+Si ponemos un correo sin @, el programa ejecuta todo el bucle, al no encontrarlo entra al else y ahi lo pondra como falso.
+Se puede hacer lo mismo de otra forma sin usar el else. 
+
+Video 19
+Generadores
+Que son. Son estructuras que traen valores de una funcion de forma distintas a otros lenguajes. Se almacenan en objetos iterables (que se pueden recorrer con bucles for, while, etc)
+Estos valores se almacenan de uno en uno.
+Cada vez que un generador almacena un valor, esta permanece en un estado pausado hasta que se solicita elsiguiente. Esto se lo conoce como suspension de estado.
+
+El generador, a diferencia de una funcion, en vez de usar el "return", lo que usa es el "yield".
+
+def generaNumeros():
+
+yield numeros
+
+El funcionamiento es el siguiente, si llamamos al generador una vez, devuelve un valor. Al llamarlo de nuevo, devuelve al siguiente, y asi cada vez q lo llamamos.
+Obtenemos los valores de uno en uno, a diferencia de una funcion comun que devuelve todos de una sola vez.
+Los generadores son mas eficientes que las funciones tradicionales.
+Muy utiles con listas de valores infinitos.
+Bajo determinados escenarios, sera muy util que un generador devuelva los valores de uno en uno
+
+Generadores- Sintaxis
+
+Def generaNumeros():
+
+	yield numeros
+
+Ejemplo de funcion
+
+def generaPares(limite):
+    num=1
+    
+    miLista=[]
+    
+    while num<limite:
+        
+        miLista.append(num*2)
+        
+        num=num+1
+        
+    return miLista
+
+print(generaPares(10))
+
+Como vemos, generamos una funcion que queremos que nos otorgue numeros pares. Pero para ponerle un limite y no quede tirando hasta el infinito, ponemos en argumento una variable limite.
+
+Creamos otra variable que es num=1 y una lista vacia. Luego, con el bucle while decimos que mientras la variable num<limite, a miLista se le agregue un num*2 (asi da pares).
+
+le pedimos que num se incremente uno en uno cada vez que entra en el while, y le pedimos a la funcion que nos devuelva una lista completa. Con el print, le decimos que imprima
+la funcion generaPares (que devuelve una lista) y en el argumento ponemos la cantidad de pares que queremso que devuelva.
+
+Ej Generador
+
+def generaPares(limite):
+    num=1
+    
+      
+    while num<limite:
+        
+        yield num*2
+        
+        num=num+1
+        
+devuelvePares=generaPares(10)
+
+for i in devuelvePares:
+    
+    print(i)
+
+En este caso, como el generador devuelve un objeto iterable, no nos hace falta generar una lista. Lo que si hay que generar una variable que devuelva la variable objeto ("DevuelvePares=generaPares(10))")
+
+Luego, recorremos la variable devuelvePares con while o for.
+
+Aca solo vimos la sintaxis. Pero no vemos diferencia con la funcion.
+
+Ej metodo next
+def generaPares(limite):
+    num=1
+    
+      
+    while num<limite:
+        
+        yield num*2
+        
+        num=num+1
+        
+devuelvePares=generaPares(10)
+
+    
+print(next(devuelvePares))
+    
+print("Aqui podria ir mas linea de codigo ")
+    
+print(next(devuelvePares))
+    
+print("Aqui podria ir mas linea de codigo ")
+    
+print(next(devuelvePares))
+    
+print("Aqui podria ir mas linea de codigo ")
+
+Si en lugar de recorrer el generador con un for usamos el metodo next, entonces podemos ir pidiendole al generador que nos vaya diciendo de a uno los resultados.
+
+Cada vesz qye se encuentra con el next, vuelve al generador y da el siguiente el resultado.
+
+Entre llamada y llamada, el generador entra en lo que se conoce como un estado de suspension
+
+Video 20
+
+Generadores II
+
+Instruccion yieldfrom
+
+Utilidad. Simplificar el codigo de los generadores en el caso de utilizar bucles anidados. Es similar a un array de dos dimensiones en otro lenguaje.
+
+En Phyton, cuando agregamos un * antes del argumento, estamos diciendole al programa que va a recibir un numero indeterminado de valores, y que van a ser en forma de tupla.
+
+Ej
+def devuelve_ciudades(*ciudades):
+    for elemento in ciudades:
+        yield elemento
+        
+ciudades_devueltas=devuelve_ciudades("Madrid","Barcelona","Bilbao","Valencia")
+
+print(next(ciudades_devueltas))
+
+print(next(ciudades_devueltas))
+
+Aca vemos que tenemos un generador que devuelve ciudades. Pero supongamos que dentro de cada ciudad (variable elemento) tenemos compuesto cada letra, y quisieramos acceder a cada una de ellas.
+
+Recordar que un bucle es anidado cuando se encuentra dentro de otro.
+
+Ej. de acceso con bucle for anidado 
+def devuelve_ciudades(*ciudades):
+    for elemento in ciudades:
+        for subElemento in elemento:
+            yield subElemento
+        
+ciudades_devueltas=devuelve_ciudades("Madrid","Barcelona","Bilbao","Valencia")
+
+print(next(ciudades_devueltas))
+
+print(next(ciudades_devueltas))
+
+Esto se vuelve mas facil y visible con el yield from
+
+def devuelve_ciudades(*ciudades):
+    for elemento in ciudades:
+       yield from elemento
+        
+ciudades_devueltas=devuelve_ciudades("Madrid","Barcelona","Bilbao","Valencia")
+
+print(next(ciudades_devueltas))
+
+print(next(ciudades_devueltas))
+
+Viudeo 21
+
+Excepciones
+
+Una excepcion es un error durante la ejecucion. La sintaxis del codigo es correcta pero durante la ejecucion ha ocurrido "algo inesperado" (no previsto).
+En programas muy grandes puede ser catastrofico.
+El programa lee las lineas de arriba hacia abajo. Si por algun motivo se genera ese error en la mitad del programa, la mitad del mismo queda sin ejecutarse.
+El programa queda en la espera en dicho codigo.
+
+Para solucionar este problema se realiza lo que se conoce como una captura o control de excepcion.
+
+Basicamente le dices al programa que intente ejecutar la linea del error y, en caso de que no pueda, contine con el resto del programa de igual modo.
+
+Cuando sucede un error, la consola nos devuelve informacion muy valiosa. Nos indica en que lineas se esta generando el error y porqué.
+
+En funcion de la linea que genera el problema, se usa la palabra reservada try para tratar de salvar el problema. Si no se genera error, salta el except. 
+Sino, aparecera el except.
+En caso de que no lo consiga, luego va el except con el tipo de error.
+
+def divide(num1,num2):
+    try:
+        return num1/num2
+    except ZeroDivisionError:
+         print("No se puede dividir entre 0")
+         return "Operacion erronea"
+
+En este ejemplo, no se puede divir por cero. Entonces con el try, se ejecuta la accion, si no se esta dividiendo por cero ignora el except.
+ Si se divide por 0, aparece la excepcion.
+Obviamente, la excepcion tiene que ser la que se genera en esa linea, si se pone cualquier otro tipo de error que nada que ver el programa seguira sin funcionar.
+
+Video 22
+
+Excepciones II
+
+-	Capturas de varias excepciones
+- 	Clausula finally
+
+Cuando usamos el try y el except, puede suceder que se solucione un error, pero que el programa siga teniendo errores mas abajo de todas formas.
+Lo que se tiene que intentar es capturar varias excepciones, de modo tal que cuando se ejecute el programa y haya un error, se genere un bucle que solicite
+de nuevo ingresar datos.
+Una forma es con el While True
+
+Ej
+while True:
+    
+    try:
+        op1=(int(input("Introduce el primer número: ")))
+
+        op2=(int(input("Introduce el segundo número: ")))	
+    
+        break
+
+    except ValueError:
+        print("Los valores introducidos no son correctos")	
+
+Al generar el bucle infinito While, el programa se lee asi:
+Primero el programa ve si ponemos vien los datos (que sean numero y no un str o un simbolo). Si es asi, lee el break y sale del bucle sin leer el except.
+Si no, va al except, y como no se cumple la condicion True, no puede salir del bucle y solicita de nuevo los valores.
+
+Otra forma que tiene phyton es usar varios except consecutivos:
+
+def divide():
+    
+    try:
+    
+        opc1=(float(input("introduce el primer numero: ")))
+    
+        opc2=(float(input("introduce el segundo numero: ")))
+    
+        print("La division es: "+str(opc1/opc2))
+        
+    except ValueError:
+        print("El valor introducido es erroneo")
+    
+    except ZeroDivisionError:
+        print("no se puede dividir por 0!")
+    
+    print("Calculo finalizado")
+    
+divide()
+
+
+tambien se puede usar el except solo, y ya te toma los posibles errores, 
+pero no queda claro para el usuario cual fue el error por lo cual no se recomienda tanto.
+
+Con el finally, siempre se ejecuta una linea o bloque, independientemente de si ocurre un error o no.
+
+Video 23
+
+Lanzamiento de excepciones
+Instrucciones Raise
+Creacion de excepciones propias
+
+La instruccion Raise nos permite definir un error y elegir el mensaje que se envia. Si el error es uno inventado por nosotros (o sea, uno que no se encuentre
+por defecto en Phyton), debemos indicarle al programa que es lo q tiene q hacer (se vera mas adelante).
+
+Video 24
+
+POO
+Ya lo tengo resumido en el curso de JAVA
+
+Video 25
+
+POO II
+
+Clase: modelo donde redactan las caracteristicas comunes de un objeto.
+
+objeto, ejemplar o Instancia: ejemplar que pertenecen a una clase. Sinonimo de objeto.
+
+Modularizacion: una aplicacion puede estar compuestas de varias clases o modulos. El programa se divide en distintos modulos 
+que permite reutilizar codigos.
+
+Encapsulacion: el funcionamiento interno de cada modulo no depende de otro modulo. 
+
+Metodos de acceso: son las conexiones entre los distintos modulos.
+
+nomenclatura del punto "nombredelobjeto.comportamiento"
+
+Video 26
+
+para crear una clase usamos la palabra reservada class
+
+para darle un comportamiento a nuestro objeto tenemos que generar un metodo.
+ej. class coche
+El coche puede arrancar, frenar, etc.
+
+Para generar un metodo usamos la palabra reservada def
+Cuando ponemos def, nos sale como palabra reservada que nos permite crear o una funcion o un metodo.
+Un metodo es una funcion especial que nos remite a la clase, mientras que una funcion no pertenece a ninguna clase.
+
+Sintaxis de un metodo
+def nombreMetodo(objeto perteneciente a la clase):             ---- comentario:el argumento self es el equivalente al this que nos encontramos en otros lenguajes como Java
+
+Para generar un objeto usamos la siguiente sintaxis:
+
+NombreObjeto=NombreClase() <-A esto se le llama instanciar o ejemplarizar una clase
+
+Para darle una accion a una clase, usamos el metodo.
+Ej.
+  def arrancar(self):   //Aca estoy creando el metodo
+        self.enMarcha=True  //aca estoy como diciendo en lugar del self, llamando a la clase miCoche
+
+miCoche.arrancar() //Aca estoy dando la orden o generando la accion. Basicamente llamo a la funcion generada en el metodo.
+
+Video 27
+
+Podemos realizar dos acciones dentro de un metodo agregando un parametro. Por ej:
+ def arrancar(self,arrancamos):
+        self.enMarcha=arrancamos
+
+Vemos que en el parametro, el argumento self se refiere al propio objeto que lo invoca (miCoche2), y luego un False, ese False se almacena en arrrancamos (ver los 
+siguientes renglones como finaliza el ejemplo).
+
+En este caso, el metodo arrancar espera un parametro por arrancamos. 
+print(miCoche2.arrancar(False))
+
+En este ejemplo, le estamos diciendo que el metodo arrancar esta recibiendo un parametro Falso por "arrancamos".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

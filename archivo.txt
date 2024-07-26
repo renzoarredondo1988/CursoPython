@@ -1,0 +1,4 @@
+Estupendo dia para estudiar Phyton 
+Esta linea de texto ha sido incluida desde el exterior 
+ Siempre es una buena opcion estudiar pyComienzo del texto 
+ 

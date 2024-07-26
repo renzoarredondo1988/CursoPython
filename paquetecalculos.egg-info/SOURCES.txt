@@ -1,0 +1,9 @@
+setup.py
+Paquetes_Video35/__init__.py
+Paquetes_Video35/calculos_generales.py
+Paquetes_Video35/redondeo_potencia/__init__.py
+Paquetes_Video35/redondeo_potencia/redondea_y_potencia.py
+paquetecalculos.egg-info/PKG-INFO
+paquetecalculos.egg-info/SOURCES.txt
+paquetecalculos.egg-info/dependency_links.txt
+paquetecalculos.egg-info/top_level.txt
